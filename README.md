@@ -26,3 +26,5 @@ The image below shows the remaining errors after fixing the other indention erro
 <img width="1176" height="336" alt="Screenshot SA 5" src="https://github.com/user-attachments/assets/d62e4915-06a8-4f5d-ab49-645ce1e5aed5" />
 The image below shows the remaining errors after fixing the trailing errors (whitespace and new lines errors)
 <img width="1183" height="303" alt="Screenshot SA 6" src="https://github.com/user-attachments/assets/43214c30-0a2b-4e29-912b-e3da8ec7aad8" />
+The image below shows the remaining errors after fixing the missing-module-docstring error.
+<img width="1177" height="284" alt="Screenshot SA 7" src="https://github.com/user-attachments/assets/c10ea87b-59b3-4523-af4c-04ddbc1eb0bc" />
