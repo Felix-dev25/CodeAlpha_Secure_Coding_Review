@@ -64,7 +64,7 @@ Copilot reccommendations:
 
 3. Avoid printing raw payload data unless necessary; or sanitize it if you do.
 
-4. Never use this to sniff traffic without clear user permission—wiretap laws exist in many regions, including Kenya.
+4. Never use this to sniff traffic without clear user permission, wiretap laws exist in many regions, including Kenya.
 
 5. Run with minimal privileges when possible
 
@@ -75,12 +75,12 @@ Security and stabilty considerations for the tracert function:
 
 3. Error Handling: No try-except block means if sr1() throws an exception (e.g., DNS resolution fails, ICMP unreachable), your script will crash. Wrap those calls to guard against abrupt failures.
 
-4. Silent Failures: If a hop is firewalled or blocks ICMP, the timeout message is helpful—but you might want to add logging to track unreachable hops in a structured format.
+4. Silent Failures: If a hop is firewalled or blocks ICMP, the timeout message is helpful, but you might want to add logging to track unreachable hops in a structured format.
 
 The final secure code improved by copilot with input validation is in the Branch More_secure
 
 When writing code you should always practice:
-1. Input valdation - sanitize and validate user input
+1. Input validation - sanitize and validate user input
 2. Use least privilege principle
 3. Avoid hardcoding credentials
 4. Handle errors gracefully
