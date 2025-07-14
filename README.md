@@ -38,5 +38,21 @@ The image below shows the remaining errors and score after fixing the next four 
 <img width="918" height="169" alt="Screenshot SA 11" src="https://github.com/user-attachments/assets/0f6b6fc0-1779-4393-b3f8-6813f0be80e1" />
 The image below shows the remaining errors and score after fixing the function-redifined errors.
 <img width="912" height="97" alt="Screenshot SA 12" src="https://github.com/user-attachments/assets/b84aab7e-480a-40bc-ae8b-7cf00568fdce" />
+The image below shows the clean code and perfect/ maximum score after fixing the last missing-function-docstring error
+<img width="613" height="65" alt="Screenshot SA clean code" src="https://github.com/user-attachments/assets/e385b2e9-433a-4c1a-b9cf-031caf79f540" />
+According to pylint the static code analysis has completed with a perfect score of 10/10.
+Personally I know the code, though clean is not yet secure since I introduced an input interface for tracert which has no input validation.
+So to be sure the code is clean and secure we test the code with copilot.
+The following are security considerations by copilot:
+1. Privilege Requirement: sniff() uses raw sockets which typically require root/administrator privileges. Running this with elevated rights can be risky if the environment is not well controlled.
+
+2. Open Sniffing: If you deploy this on a shared network or device without user consent, it can become legally and ethically problematic—especially in corporate or public settings.
+
+3. No Output Filtering or Sanitization: Your print statements directly output data from packets. If this were piped into a log or UI in a real system, you'd want to sanitize inputs to prevent injection attacks or unexpected code execution.
+
+4. No Exception Handling: If a malformed packet or unsupported protocol slips through, it could throw an error. Adding basic try...except blocks would boost resilience.
+
+5. No Rate Limiting or Control: Continuous sniffing could overwhelm your system or generate massive logs if used at scale. Always consider limiting packet capture scope or add pause intervals if needed.
+
 
 
