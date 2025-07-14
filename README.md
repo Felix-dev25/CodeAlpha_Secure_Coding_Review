@@ -77,7 +77,7 @@ Security and stabilty considerations for the tracert function:
 
 4. Silent Failures: If a hop is firewalled or blocks ICMP, the timeout message is helpful—but you might want to add logging to track unreachable hops in a structured format.
 
-The final secure code improved by copilot 
+The final secure code improved by copilot with input validation is in the Branch More_secure
 
 When writing code you should always practice:
 1. Input valdation - sanitize and validate user input
