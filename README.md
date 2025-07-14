@@ -4,11 +4,19 @@ The code attached is clean code with a score of 10/10
 To get clean code I used plint for static code analysis.
 Pylint is a static code analysis tool for Python that helps identify errors, enforce coding standards, and improve code quality. 
 It adheres to the PEP8 style guide and assigns a score to your code based on its quality.
-I begun with a code that was already running without errors on both command prompt and IDLE
-I thought my code was clean but my the first score showed it still had alot to be done to make it clean/ secure.
+The image below shows the installation process of pylint using command prompt.
 
-<img width="1141" height="592" alt="Screenshot SA 1" src="https://github.com/user-attachments/assets/3bdd3d8a-e958-4d85-86ca-56a46333214e" />
+<img width="1141" height="592" alt="Screenshot SA 1" src="https://github.com/user-attachments/assets/64e17339-bfc4-4386-978f-6960bf469a5d" />
 
-The image above shows the code score according to pylint. This is the same code I used for my first task and what is uploaded in my first task. 
-The code I used is the final updated code from my first repo; 
+I used a code already running without errors on both command prompt and IDLE.
+The code I used with pylint is the final updated code from my first repo; Basic network sniffer.
+The code was working correctly and even could perform tracert on a domain without errors.
+I thought the code would pass the pylint analysis but the code failed misserably.
+The image belows shows the score. The code with this misserable score is available in my first repo.
+The code attached to this repo (basic_network_sniffer_updated.py code) is clean code with a 10/10 score.
 
+<img width="1177" height="399" alt="Screenshot SA 2" src="https://github.com/user-attachments/assets/dce0a770-8de6-47d6-b701-71e185391f1a" />
+
+The image below show the remaining errors after fixing the trailing white space error. The score improves;
+
+<img width="1174" height="386" alt="Screenshot SA 3" src="https://github.com/user-attachments/assets/1e2d6297-e4f2-4a60-bdf5-2a071d1ce6d1" />
