@@ -24,3 +24,5 @@ The image below shows the remaining errors after fixing the first indention erro
 <img width="1178" height="377" alt="Screenshot SA 4" src="https://github.com/user-attachments/assets/2db0a6cc-4eeb-45c0-9824-493e5c419d2a" />
 The image below shows the remaining errors after fixing the other indention errors.
 <img width="1176" height="336" alt="Screenshot SA 5" src="https://github.com/user-attachments/assets/d62e4915-06a8-4f5d-ab49-645ce1e5aed5" />
+The image below shows the remaining errors after fixing the trailing errors (whitespace and new lines errors)
+<img width="1183" height="303" alt="Screenshot SA 6" src="https://github.com/user-attachments/assets/43214c30-0a2b-4e29-912b-e3da8ec7aad8" />
