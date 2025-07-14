@@ -30,6 +30,13 @@ The image below shows the remaining errors after fixing the missing-module-docst
 <img width="1177" height="284" alt="Screenshot SA 7" src="https://github.com/user-attachments/assets/c10ea87b-59b3-4523-af4c-04ddbc1eb0bc" />
 The image below shows the remaining errors and score after fixing the invalid name error.
 <img width="988" height="275" alt="Screenshot SA 8" src="https://github.com/user-attachments/assets/5473972c-6855-48b8-80fd-f494f4eba349" />
-The image below shows the remaining errors and score after fixing the no-name-in-module error
+The image below shows the remaining errors and score after fixing the no-name-in-module errors.
 <img width="1043" height="246" alt="Screenshot SA 9" src="https://github.com/user-attachments/assets/b203069c-c322-41f8-a8ea-361dcc82e8c5" />
+The image below shows the remaining errors and score after fixing the first missing-function-docstring error.
+<img width="1122" height="227" alt="Screenshot SA 10" src="https://github.com/user-attachments/assets/426e5db6-4f12-409d-8e1c-4c9e999cb305" />
+The image below shows the remaining errors and score after fixing the next four missing-function-docstring errors.
+<img width="918" height="169" alt="Screenshot SA 11" src="https://github.com/user-attachments/assets/0f6b6fc0-1779-4393-b3f8-6813f0be80e1" />
+The image below shows the remaining errors and score after fixing the function-redifined errors.
+<img width="912" height="97" alt="Screenshot SA 12" src="https://github.com/user-attachments/assets/b84aab7e-480a-40bc-ae8b-7cf00568fdce" />
+
 
