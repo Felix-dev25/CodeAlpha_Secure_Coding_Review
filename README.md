@@ -38,14 +38,17 @@ The image below shows the remaining errors and score after fixing the next four 
 <img width="918" height="169" alt="Screenshot SA 11" src="https://github.com/user-attachments/assets/0f6b6fc0-1779-4393-b3f8-6813f0be80e1" />
 The image below shows the remaining errors and score after fixing the function-redifined errors.
 <img width="912" height="97" alt="Screenshot SA 12" src="https://github.com/user-attachments/assets/b84aab7e-480a-40bc-ae8b-7cf00568fdce" />
-The image below shows the clean code and perfect/ maximum score after fixing the last missing-function-docstring error
+The image below shows the clean code after fixing the last missing-function-docstring error
+
 <img width="613" height="65" alt="Screenshot SA clean code" src="https://github.com/user-attachments/assets/e385b2e9-433a-4c1a-b9cf-031caf79f540" />
+
 According to pylint the static code analysis has completed with a perfect score of 10/10.
+
 Personally I know the code, though clean is not yet secure since I introduced an input interface for tracert which has no input validation.
 So to be sure the code is clean and secure we test the code with copilot.
+
 The following are security considerations by copilot:
 1. Privilege Requirement: sniff() uses raw sockets which typically require root/administrator privileges. Running this with elevated rights can be risky if the environment is not well controlled.
-
 2. Open Sniffing: If you deploy this on a shared network or device without user consent, it can become legally and ethically problematic—especially in corporate or public settings.
 
 3. No Output Filtering or Sanitization: Your print statements directly output data from packets. If this were piped into a log or UI in a real system, you'd want to sanitize inputs to prevent injection attacks or unexpected code execution.
@@ -53,6 +56,35 @@ The following are security considerations by copilot:
 4. No Exception Handling: If a malformed packet or unsupported protocol slips through, it could throw an error. Adding basic try...except blocks would boost resilience.
 
 5. No Rate Limiting or Control: Continuous sniffing could overwhelm your system or generate massive logs if used at scale. Always consider limiting packet capture scope or add pause intervals if needed.
+
+Copilot reccommendations:
+1. Limit use to trusted and private environments.
+
+2. Add exception handling around packet parsing.
+
+3. Avoid printing raw payload data unless necessary; or sanitize it if you do.
+
+4. Never use this to sniff traffic without clear user permission—wiretap laws exist in many regions, including Kenya.
+
+5. Run with minimal privileges when possible
+
+Security and stabilty considerations for the tracert function:
+1. Input Validation: You're using raw input() for domain entry. If someone inputs malformed or malicious data, you might hit unexpected behavior. Consider validating the domain with a regex or using libraries like socket.gethostbyname() to test DNS resolution first.
+
+2. Privilege Requirements: ICMP packets often need elevated privileges (root/admin) to send. Running this as a regular user may fail silently or raise a PermissionError, depending on the OS.
+
+3. Error Handling: No try-except block means if sr1() throws an exception (e.g., DNS resolution fails, ICMP unreachable), your script will crash. Wrap those calls to guard against abrupt failures.
+
+4. Silent Failures: If a hop is firewalled or blocks ICMP, the timeout message is helpful—but you might want to add logging to track unreachable hops in a structured format.
+
+The final secure code improved by copilot 
+
+When writing code you should always practice:
+1. Input valdation - sanitize and validate user input
+2. Use least privilege principle
+3. Avoid hardcoding credentials
+4. Handle errors gracefully
+5. Keep dependacies updated - libraries and frameworks
 
 
 
