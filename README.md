@@ -28,3 +28,8 @@ The image below shows the remaining errors after fixing the trailing errors (whi
 <img width="1183" height="303" alt="Screenshot SA 6" src="https://github.com/user-attachments/assets/43214c30-0a2b-4e29-912b-e3da8ec7aad8" />
 The image below shows the remaining errors after fixing the missing-module-docstring error.
 <img width="1177" height="284" alt="Screenshot SA 7" src="https://github.com/user-attachments/assets/c10ea87b-59b3-4523-af4c-04ddbc1eb0bc" />
+The image below shows the remaining errors and score after fixing the invalid name error.
+<img width="988" height="275" alt="Screenshot SA 8" src="https://github.com/user-attachments/assets/5473972c-6855-48b8-80fd-f494f4eba349" />
+The image below shows the remaining errors and score after fixing the no-name-in-module error
+<img width="1043" height="246" alt="Screenshot SA 9" src="https://github.com/user-attachments/assets/b203069c-c322-41f8-a8ea-361dcc82e8c5" />
+
