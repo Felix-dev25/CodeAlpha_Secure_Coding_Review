@@ -20,3 +20,7 @@ The code attached to this repo (basic_network_sniffer_updated.py code) is clean 
 The image below show the remaining errors after fixing the trailing white space error. The score improves;
 
 <img width="1174" height="386" alt="Screenshot SA 3" src="https://github.com/user-attachments/assets/1e2d6297-e4f2-4a60-bdf5-2a071d1ce6d1" />
+The image below shows the remaining errors after fixing the first indention error.
+<img width="1178" height="377" alt="Screenshot SA 4" src="https://github.com/user-attachments/assets/2db0a6cc-4eeb-45c0-9824-493e5c419d2a" />
+The image below shows the remaining errors after fixing the other indention errors.
+<img width="1176" height="336" alt="Screenshot SA 5" src="https://github.com/user-attachments/assets/d62e4915-06a8-4f5d-ab49-645ce1e5aed5" />
