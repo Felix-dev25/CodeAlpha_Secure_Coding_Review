@@ -2,6 +2,7 @@
 enforce coding standards, and improve code quality.
 It adheres to the PEP8 style guide and assigns a score to your code based on its
 quality."""
+import socket
 # Analyzing basic_network_sniffer_updated.py code using pylint
 from scapy.layers.inet import IP, ICMP
 from scapy.all import sniff, Raw, sr1
@@ -70,24 +71,31 @@ print ("Tracert")
 
 def tracert(dest, max_hops=30, timeout=2):
     """ Trace route for a particular domain/ website """
-    print(f"Tracing route to {dest} over a maximum of {max_hops} hops:\n")
+    try:
+        dest_ip = socket.gethostbyname(dest)
+    except socket.gaierror:
+        print("Invalid domain or hostname.")
+        return
+
+    print(f"Tracing route to {dest} [{dest_ip}] over a maximum of {max_hops} hops:\n")
     for ttl in range(1, max_hops + 1):
-        pkt = IP(dst=dest, ttl=ttl) / ICMP()
-        reply = sr1(pkt, timeout=timeout, verbose=0)
-        if reply is None:
-            print(f"{ttl}\tRequest timed out.")
-        elif reply.type == 0:
-            print(f"{ttl}\t{reply.src} (Destination Reached)")
-            break
-        else:
-            print(f"{ttl}\t{reply.src}")
+        pkt = IP(dst=dest_ip, ttl=ttl) / ICMP()
+        try:
+            reply = sr1(pkt, timeout=timeout, verbose=0)
+            if reply is None:
+                print(f"{ttl}\tRequest timed out.")
+            elif reply.type == 0:
+                print(f"{ttl}\t{reply.src} (Destination Reached)")
+                break
+            else:
+                print(f"{ttl}\t{reply.src}")
+        except Exception as e:
+            print(f"{ttl}\tError occurred: {e}")
 
 # Prompt the user for input
-user_input = input("Enter domain/ website to tracert. For example 'Google.com' : ")
-
-# Display the input back to the user
+user_input = input("Enter domain/ website to tracert (e.g. 'google.com'): ").strip()
 print("You entered:", user_input)
 
-# Tracert to domain entered
 tracert(user_input)
+
 print ("*********************")
