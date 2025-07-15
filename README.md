@@ -44,11 +44,13 @@ The image below shows the clean code after fixing the last missing-function-docs
 
 According to pylint the static code analysis has completed with a perfect score of 10/10.
 
-Personally I know the code, though clean is not yet secure since I introduced an input interface for tracert which has no input validation.
-So to be sure the code is clean and secure we test the code with copilot.
+Personally I know the code, though clean, is not yet secure since I introduced an input interface for tracert which has no input validation. So a manual inspection is neccessary even after a perfect score (10/10). To be sure my code is not only clean but also secure, I will pass my clean code through a copilot test to test for vulnerabilities. Offcourse I know I have one vulnerability as a result of lack of input validation even before the test.
 
-The following are security considerations by copilot:
+I carried out the copilot test and copilot came up with several security consideration based on my clean code.
+
+The following are security the considerations by copilot:
 1. Privilege Requirement: sniff() uses raw sockets which typically require root/administrator privileges. Running this with elevated rights can be risky if the environment is not well controlled.
+   
 2. Open Sniffing: If you deploy this on a shared network or device without user consent, it can become legally and ethically problematic—especially in corporate or public settings.
 
 3. No Output Filtering or Sanitization: Your print statements directly output data from packets. If this were piped into a log or UI in a real system, you'd want to sanitize inputs to prevent injection attacks or unexpected code execution.
@@ -57,18 +59,8 @@ The following are security considerations by copilot:
 
 5. No Rate Limiting or Control: Continuous sniffing could overwhelm your system or generate massive logs if used at scale. Always consider limiting packet capture scope or add pause intervals if needed.
 
-Copilot reccommendations:
-1. Limit use to trusted and private environments.
-
-2. Add exception handling around packet parsing.
-
-3. Avoid printing raw payload data unless necessary; or sanitize it if you do.
-
-4. Never use this to sniff traffic without clear user permission, wiretap laws exist in many regions, including Kenya.
-
-5. Run with minimal privileges when possible
-
 Security and stabilty considerations for the tracert function:
+
 1. Input Validation: You're using raw input() for domain entry. If someone inputs malformed or malicious data, you might hit unexpected behavior. Consider validating the domain with a regex or using libraries like socket.gethostbyname() to test DNS resolution first.
 
 2. Privilege Requirements: ICMP packets often need elevated privileges (root/admin) to send. Running this as a regular user may fail silently or raise a PermissionError, depending on the OS.
@@ -76,6 +68,21 @@ Security and stabilty considerations for the tracert function:
 3. Error Handling: No try-except block means if sr1() throws an exception (e.g., DNS resolution fails, ICMP unreachable), your script will crash. Wrap those calls to guard against abrupt failures.
 
 4. Silent Failures: If a hop is firewalled or blocks ICMP, the timeout message is helpful, but you might want to add logging to track unreachable hops in a structured format.
+
+Just show that I considered the security and stabilty considerations in my More_secure code which is a branch in this repo and ready be merged to the main code. The following images show the results of the More_secure code.
+
+<img width="644" height="316" alt="Screenshot secure 1" src="https://github.com/user-attachments/assets/ef74f3f4-5e82-4f01-b3e4-6519fb9189a2" />
+
+when a non existant domain is added
+
+<img width="646" height="62" alt="Screenshot secure 2" src="https://github.com/user-attachments/assets/df695907-afd0-4503-808e-2b5f5d557b48" />
+
+Without silent failures
+
+<img width="651" height="88" alt="Screenshot secure 3" src="https://github.com/user-attachments/assets/dd784c42-fae9-4f90-aa62-b521da579057" />
+
+
+
 
 The final secure code improved by copilot with input validation is in the Branch More_secure
 
