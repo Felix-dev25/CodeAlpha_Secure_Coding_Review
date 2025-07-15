@@ -36,7 +36,7 @@ The image below shows the remaining errors and score after fixing the first miss
 <img width="1122" height="227" alt="Screenshot SA 10" src="https://github.com/user-attachments/assets/426e5db6-4f12-409d-8e1c-4c9e999cb305" />
 The image below shows the remaining errors and score after fixing the next four missing-function-docstring errors.
 <img width="918" height="169" alt="Screenshot SA 11" src="https://github.com/user-attachments/assets/0f6b6fc0-1779-4393-b3f8-6813f0be80e1" />
-The image below shows the remaining errors and score after fixing the function-redifined errors.
+The image below shows the remaining errors and score after fixing the function-redefined errors.
 <img width="912" height="97" alt="Screenshot SA 12" src="https://github.com/user-attachments/assets/b84aab7e-480a-40bc-ae8b-7cf00568fdce" />
 The image below shows the clean code after fixing the last missing-function-docstring error
 
