@@ -83,16 +83,16 @@ Without silent failures
 
 The final secure code improved by copilot with input validation is in the Branch 'More_secure'
 
-To fanilize, when writing code you should always practice:
+Finally, when writing code you should always practice:
 1. Input validation - sanitize and validate user input
 2. Use least privilege principle
 3. Avoid hardcoding credentials
 4. Handle errors gracefully
 5. Keep dependacies updated - libraries and frameworks
 
-Though all of the three codes; first repo (Basic network scanner) code, clean code (main code) and secure code ( More_secure code) work perfectly and provide results. It is advised that you sniff/ scan networks you control/ own or have permission to scan/ sniff. This code shows a lot of information hence you can avoid the payload function/ printing the payload, since it might contain sensitive information. The UDP section also nessitates you to refresh your internet for quick results hence the function can be avoided since the count of 10 is just too high from practice. 
+Though all of the three codes; first repo (Basic network scanner) code, clean code (main code) and secure code ( More_secure code) work perfectly and provide results. It is advised that you sniff/ scan networks you control/ own or have permission to scan/ sniff. This code shows a lot of information hence you can avoid the payload function/ printing the payload, since it might contain sensitive information. The UDP section also necessitates you to refresh your internet for quick results hence the function can be avoided since the count of 10 is just too high from practice. 
 
-Hope you enjoy using the More-secure code and remember to reduce the count for UDP function to 3, to speed up results hence avoid refreshing your internet.
+Hope you enjoy using the 'More-secure' code and remember to reduce the count for UDP function to 3, to speed up results hence avoid refreshing your internet.
 
 
 
