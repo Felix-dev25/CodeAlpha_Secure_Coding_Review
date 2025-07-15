@@ -1,7 +1,7 @@
 # CodeAlpha-Secure-Coding-Review
 Preforming static code analysis using pylint on python code. In this case basic_network_sniffer_updated.py code.
-The code attached is clean code with a score of 10/10
-To get clean code I used plint for static code analysis.
+The code attached is clean code (main code) with a score of 10/10
+To get the clean code I used pylint for static code analysis.
 Pylint is a static code analysis tool for Python that helps identify errors, enforce coding standards, and improve code quality. 
 It adheres to the PEP8 style guide and assigns a score to your code based on its quality.
 The image below shows the installation process of pylint using command prompt.
@@ -69,7 +69,7 @@ Security and stabilty considerations for the tracert function:
 
 4. Silent Failures: If a hop is firewalled or blocks ICMP, the timeout message is helpful, but you might want to add logging to track unreachable hops in a structured format.
 
-Just show that I considered the security and stabilty considerations in my More_secure code which is a branch in this repo and ready be merged to the main code. The following images show the results of the More_secure code.
+Just to show that I considered the security and stabilty considerations in my More_secure code which is a branch in this repo and ready be merged to the main code. The following images show the results of the More_secure code. Remember the main code is the clean code analyzed by pylint and with all errors fixed ( a perfect core of 10/10).
 
 <img width="644" height="316" alt="Screenshot secure 1" src="https://github.com/user-attachments/assets/ef74f3f4-5e82-4f01-b3e4-6519fb9189a2" />
 
@@ -81,17 +81,18 @@ Without silent failures
 
 <img width="651" height="88" alt="Screenshot secure 3" src="https://github.com/user-attachments/assets/dd784c42-fae9-4f90-aa62-b521da579057" />
 
-
-
-
 The final secure code improved by copilot with input validation is in the Branch More_secure
 
-When writing code you should always practice:
+To fanilize when writing code you should always practice:
 1. Input validation - sanitize and validate user input
 2. Use least privilege principle
 3. Avoid hardcoding credentials
 4. Handle errors gracefully
 5. Keep dependacies updated - libraries and frameworks
+
+Though all the three code; first repo (Basic network scanner) code, clean code (main code) and secure code ( More_secure code) work perfectly and provide results. It is advised that you sniff/ scan networks you control/ own or have permission to scan/ sniff. This code shows a lot of information hence you can avoid the payload function/ printing the payload since it might contain sensitive information. The UDP section also nessitates you to refresh you internet for quick results hence the function can be avoided since the count of 10 is too high from practice. 
+
+Hope you enjoy using the More-secure code and remember to reduce the count for UDP function to 3 to speed up the scanning results hence avoid refreshing your internet.
 
 
 
